@@ -1,0 +1,36 @@
+---
+import type { date } from "astro/zod"
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Abril 2024 - Agosto 2024 ",
+    title: "Pasantia como Ingeniero de software",
+    company: "Tecniva",
+    description:
+      "Se llevo a cabo el desarrollo de agentes conversacionales inteligentes utilizando ChatGPT. Entre los proyectos realizados, implemento un agente conversacional para la aseguradora BUPA (como demostración), un sistema para la gestión de citas médicas de un doctor, y un agente informativo sobre inmuebles. Se Desarrollo todas las etapas del proyecto, desde la toma de requerimientos hasta la programación, pruebas y despliegue en producción. Tecnologías empleadas: Node.js, Express, MongoDB, MySQLite, Docker, APIs REST desarrolladas internamente, Google Cloud, OpenAI, TypeScript, y servidores Linux.",
+  },
+  {
+    date: "julio 2023 - julio 2024",
+    title: "Becario Desarrollador de software",
+    company: "Politécnica de Santa Rosa",
+    description:
+      "Agente conversacional por arboles conversacionales, ( diseño de flujo, y diagramas), Implementación con Node.js, integración de procesamiento de palabras clave. Pruebas unitarias y de usabilidad. Despliegue con Docker, backend con MongoDB y MySQL. Monitoreo continuo, actualizaciones, y documentación detallada del proyecto.",
+  },
+  {
+		date: "Enero 2021 - Enero 2022",
+		title: "Facilitador CAAD",
+		company: "Comunidad de aprendizaje autodirigido (Centro de Aprendizaje Ágil)",
+		description: "Maestro en el Centro de Aprendizaje Ágil, facilitando la comunidad de aprendizaje autodirigido para niños que realizaban home school. Guié a los estudiantes en su educación, fomentando el desarrollo de habilidades autónomas y adaptativas en un entorno de aprendizaje flexible y colaborativo."
+	}
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
